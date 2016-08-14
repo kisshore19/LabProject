@@ -5,7 +5,6 @@ package com.company.spring.dao;
 
 import org.springframework.stereotype.Repository;
 
-import com.company.hibernate.entities.Customer;
 import com.company.hibernate.entities.Items;
 
 /**
