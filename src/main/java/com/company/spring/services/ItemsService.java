@@ -3,7 +3,6 @@
  */
 package com.company.spring.services;
 
-import com.company.hibernate.entities.Customer;
 import com.company.hibernate.entities.Items;
 
 /**
