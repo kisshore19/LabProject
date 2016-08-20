@@ -5,6 +5,7 @@ import com.company.hibernate.entities.BusinessDetails;
 public interface BusinessDetailsDAO {
 
 	void saveActor(BusinessDetails actor);
+	BusinessDetails getBusinessDetails(BusinessDetails businessDetails);
 
 	/*List<BusinessDetails> findAllActors();
 

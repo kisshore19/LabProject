@@ -18,6 +18,10 @@ public class BusinessDetailsServiceImpl implements BusinessDetailsService {
 		businessDetailsDAO.saveActor(businessDetails);
 
 	}
+	
+	public BusinessDetails getBusinessDetails(BusinessDetails businessDetails) {
+		return businessDetailsDAO.getBusinessDetails(businessDetails);
+	}
 
 /*	public List<Actor> findAllActors() {
 		return actorDao.findAllActors();

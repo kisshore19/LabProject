@@ -10,6 +10,10 @@ public class BusinessDetailsDAOImpl extends AbstractDao implements BusinessDetai
 	public void saveActor(BusinessDetails businessDetails) {
 		persist(businessDetails);
 	}
+	
+	public BusinessDetails getBusinessDetails(BusinessDetails businessDetails) {
+		return (BusinessDetails)getSession().get(BusinessDetails.class, businessDetails.getId());
+	}
 
 	/*@SuppressWarnings("unchecked")
 	public List<BusinessDetails> findAllActors() {

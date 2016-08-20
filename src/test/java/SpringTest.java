@@ -77,13 +77,13 @@ public class SpringTest {
 		businessDetails.setCompanyName("JNATHRI");
 		businessDetails.setCompanyDomain("Lead success");
 		
-		businessDetails.getAccountDetails().add(accountDetails);
-		businessDetails.getAddresses().add(address);
-		//businessDetailsService.saveBusinessDetails(businessDetails);
+		/*businessDetails.getAccountDetails().add(accountDetails);
+		businessDetails.getAddresses().add(address);*/
+		businessDetailsService.saveBusinessDetails(businessDetails);
 		
 		
 		//customerService.saveCustomer(customer);
 		
-		itemsService.saveItem(items);
+		//itemsService.saveItem(items);
 	}
 }
