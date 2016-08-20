@@ -12,8 +12,9 @@
 		<action name="index">
 			<result>/WEB-INF/jsps/index.jsp</result>
 		</action>
-		
-		<action name="welcome" class="com.company.struts.actions.WelcomeAction" method="execute">
+
+		<action name="welcome" class="com.company.struts.actions.WelcomeAction"
+			method="execute">
 			<result name="success">/WEB-INF/jsps/index.jsp</result>
 		</action>
 
