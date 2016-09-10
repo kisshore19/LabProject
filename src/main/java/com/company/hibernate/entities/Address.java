@@ -32,13 +32,13 @@ public class Address implements Serializable {
 	@Id
 	@GeneratedValue
 	@Column(name = "ID", columnDefinition = "int")
-	private int Id;
+	private Integer Id;
 
 	@Column(name = "BUSINESS_DETAILS_ID", columnDefinition = "int", insertable = false, updatable = false)
-	private int businessDetailsId;
+	private Integer businessDetailsId;
 
 	@Column(name = "CUSTOMER_ID", columnDefinition = "int", insertable = false, updatable = false)
-	private int customerId;
+	private Integer customerId;
 
 	@Column(name = "HOUSE_NO", columnDefinition = "varchar")
 	private String houseNo;
@@ -62,22 +62,22 @@ public class Address implements Serializable {
 	private String country;
 
 	@Column(name = "PINCODE", columnDefinition = "int")
-	private int pincode;
+	private Integer pincode;
 
 	@Column(name = "MOBILE_NO", columnDefinition = "int")
-	private int mobileNo;
+	private Integer mobileNo;
 
 	@Column(name = "LAND_NO_1", columnDefinition = "int")
-	private int landNo1;
+	private Integer landNo1;
 
 	@Column(name = "LAND_NO_2", columnDefinition = "int")
-	private int landNo2;
+	private Integer landNo2;
 
 	@Column(name = "IS_ACTIVE", columnDefinition = "tinyint")
-	private int isActive;
+	private Integer isActive;
 
 	@Column(name = "IS_PRIMARY_ADDRESS", columnDefinition = "tinyint")
-	private int isPrimaryAddress;
+	private Integer isPrimaryAddress;
 
 	@Column(name = "INSERTED_TIMESTAMP", columnDefinition = "timestamp")
 	@Temporal(TemporalType.TIMESTAMP)
@@ -94,7 +94,7 @@ public class Address implements Serializable {
 		return Id;
 	}
 
-	public void setId(int id) {
+	public void setId(Integer id) {
 		Id = id;
 	}
 
@@ -102,7 +102,7 @@ public class Address implements Serializable {
 		return businessDetailsId;
 	}
 
-	public void setBusinessDetailsId(int businessDetailsId) {
+	public void setBusinessDetailsId(Integer businessDetailsId) {
 		this.businessDetailsId = businessDetailsId;
 	}
 
@@ -110,7 +110,7 @@ public class Address implements Serializable {
 		return customerId;
 	}
 
-	public void setCustomerId(int customerId) {
+	public void setCustomerId(Integer customerId) {
 		this.customerId = customerId;
 	}
 
@@ -174,7 +174,7 @@ public class Address implements Serializable {
 		return pincode;
 	}
 
-	public void setPincode(int pincode) {
+	public void setPincode(Integer pincode) {
 		this.pincode = pincode;
 	}
 
@@ -182,7 +182,7 @@ public class Address implements Serializable {
 		return mobileNo;
 	}
 
-	public void setMobileNo(int mobileNo) {
+	public void setMobileNo(Integer mobileNo) {
 		this.mobileNo = mobileNo;
 	}
 
@@ -190,7 +190,7 @@ public class Address implements Serializable {
 		return landNo1;
 	}
 
-	public void setLandNo1(int landNo1) {
+	public void setLandNo1(Integer landNo1) {
 		this.landNo1 = landNo1;
 	}
 
@@ -198,7 +198,7 @@ public class Address implements Serializable {
 		return landNo2;
 	}
 
-	public void setLandNo2(int landNo2) {
+	public void setLandNo2(Integer landNo2) {
 		this.landNo2 = landNo2;
 	}
 
@@ -206,7 +206,7 @@ public class Address implements Serializable {
 		return isActive;
 	}
 
-	public void setIsActive(int isActive) {
+	public void setIsActive(Integer isActive) {
 		this.isActive = isActive;
 	}
 
@@ -214,7 +214,7 @@ public class Address implements Serializable {
 		return isPrimaryAddress;
 	}
 
-	public void setIsPrimaryAddress(int isPrimaryAddress) {
+	public void setIsPrimaryAddress(Integer isPrimaryAddress) {
 		this.isPrimaryAddress = isPrimaryAddress;
 	}
 

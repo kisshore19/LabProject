@@ -23,10 +23,10 @@ public class BankDetails implements Serializable{
 	@Id
 	@GeneratedValue
 	@Column(name="ID", columnDefinition="int")
-	private int id;
+	private Integer id;
 	
 	@Column(name="ACCOUNT_DETAILS_ID", columnDefinition="int", insertable=false, updatable=false)
-	private int accountDetailsId;
+	private Integer accountDetailsId;
 	
 	@Column(name="BANK_NAME", columnDefinition="varchar")
 	private String bankName;
@@ -58,7 +58,7 @@ public class BankDetails implements Serializable{
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
@@ -66,7 +66,7 @@ public class BankDetails implements Serializable{
 		return accountDetailsId;
 	}
 
-	public void setAccountDetailsId(int accountDetailsId) {
+	public void setAccountDetailsId(Integer accountDetailsId) {
 		this.accountDetailsId = accountDetailsId;
 	}
 

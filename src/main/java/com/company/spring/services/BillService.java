@@ -9,9 +9,10 @@ import com.company.hibernate.entities.Items;
 
 /**
  * @author ogvkisshorre
- *
+ * 
  */
-public interface ItemsService {
-	void saveItem(Items items);
-	List<Items> getAllItems();
+public interface BillService {
+
+	public List<Items> createNewBill();
+
 }

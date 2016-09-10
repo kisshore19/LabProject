@@ -35,7 +35,7 @@ public class AccountDetails implements Serializable {
 	@Id
 	@GeneratedValue
 	@Column(name = "ID", columnDefinition = "int")
-	private int id;
+	private Integer id;
 
 	@OneToMany(cascade = CascadeType.ALL)
 	@JoinColumn(name = "ACCOUNT_DETAILS_ID", nullable=false)
@@ -68,7 +68,7 @@ public class AccountDetails implements Serializable {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 

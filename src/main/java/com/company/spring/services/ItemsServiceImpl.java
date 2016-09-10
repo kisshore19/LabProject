@@ -3,6 +3,8 @@
  */
 package com.company.spring.services;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -32,6 +34,15 @@ public class ItemsServiceImpl implements ItemsService {
 	public void saveItem(Items items) {
 
 		itemsDao.saveItem(items);
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see com.company.spring.services.ItemsService#getAllItems()
+	 */
+	public List<Items> getAllItems() {
+		return itemsDao.getAllItems();
 	}
 
 }

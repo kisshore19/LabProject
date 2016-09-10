@@ -33,7 +33,7 @@ public class Customer implements Serializable {
 	@Id
 	@GeneratedValue
 	@Column(name = "ID", columnDefinition = "int")
-	private int id;
+	private Integer id;
 
 	@OneToMany(cascade = CascadeType.ALL)
 	@JoinColumn(name = "CUSTOMER_ID", nullable = false, insertable = false, updatable = false)
@@ -51,7 +51,7 @@ public class Customer implements Serializable {
 	private String customerName;
 
 	@Column(name = "AGE", columnDefinition = "int")
-	private int age;
+	private Integer age;
 
 	@Column(name = "DOB", columnDefinition = "date")
 	private Date dob;
@@ -69,7 +69,7 @@ public class Customer implements Serializable {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
@@ -85,7 +85,7 @@ public class Customer implements Serializable {
 		return age;
 	}
 
-	public void setAge(int age) {
+	public void setAge(Integer age) {
 		this.age = age;
 	}
 

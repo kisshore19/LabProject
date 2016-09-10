@@ -33,20 +33,20 @@ public class CustomerOrders implements Serializable {
 	@Id
 	@GeneratedValue
 	@Column(name = "ID", columnDefinition = "int")
-	private int id;
+	private Integer id;
 
 	@OneToMany(cascade = CascadeType.ALL)
 	@JoinColumn(name = "ORDER_ID", nullable = false, insertable = false, updatable = false)
 	private List<CustomerBill> customerBills_;
 
 	@Column(name = "ITEM_ID", columnDefinition = "int", nullable = true, insertable = false, updatable = false)
-	private int itemId;
+	private Integer itemId;
 
 	@Column(name = "CUSTOMER_ID", columnDefinition = "int", insertable = false, updatable = false)
-	private int customerId;
+	private Integer customerId;
 
 	@Column(name = "ITEM_QTY", columnDefinition = "int")
-	private int itemQty;
+	private Integer itemQty;
 
 	@Column(name = "ITEM_PRICE", columnDefinition = "float")
 	private float itemPrice;
@@ -64,7 +64,7 @@ public class CustomerOrders implements Serializable {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
@@ -72,7 +72,7 @@ public class CustomerOrders implements Serializable {
 		return itemId;
 	}
 
-	public void setItemId(int itemId) {
+	public void setItemId(Integer itemId) {
 		this.itemId = itemId;
 	}
 
@@ -80,7 +80,7 @@ public class CustomerOrders implements Serializable {
 		return customerId;
 	}
 
-	public void setCustomerId(int customerId) {
+	public void setCustomerId(Integer customerId) {
 		this.customerId = customerId;
 	}
 
@@ -88,7 +88,7 @@ public class CustomerOrders implements Serializable {
 		return itemQty;
 	}
 
-	public void setItemQty(int itemQty) {
+	public void setItemQty(Integer itemQty) {
 		this.itemQty = itemQty;
 	}
 
@@ -96,7 +96,7 @@ public class CustomerOrders implements Serializable {
 		return itemPrice;
 	}
 
-	public void setItemPrice(float itemPrice) {
+	public void setItemPrice(Float itemPrice) {
 		this.itemPrice = itemPrice;
 	}
 

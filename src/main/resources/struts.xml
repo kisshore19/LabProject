@@ -6,6 +6,7 @@
 <struts>
 
 	<constant name="struts.devMode" value="true" />
+	<constant name="struts.ui.theme" value="simple" />
 
 	<package name="basicstruts2" extends="struts-default">
 
@@ -21,6 +22,13 @@
 		<action name="saveNewBusiness" class="com.company.struts.actions.BusinessDetailsAction"
 			method="saveBusinessDetails">
 			<result name="success">/WEB-INF/jsps/index.jsp</result>
+		</action>
+
+
+		<!-- Create a new bill -->
+		<action name="createNewBill" class="com.company.struts.actions.BillingAction"
+			method="newBill">
+			<result name="success">/WEB-INF/jsps/createBill.jsp</result>
 		</action>
 
 

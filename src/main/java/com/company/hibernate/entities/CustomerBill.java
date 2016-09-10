@@ -28,16 +28,16 @@ public class CustomerBill  implements Serializable{
 	@Id
 	@GeneratedValue
 	@Column(name="ID", columnDefinition="int")
-	private int id;
+	private Integer id;
 	
 	@Column(name="CUSTOMER_ID", columnDefinition="int" , nullable = false, insertable = false, updatable = false)
-	private int customerId;
+	private Integer customerId;
 	
 	@Column(name="ORDER_ID", columnDefinition="int" , nullable = false, insertable = false, updatable = false)
-	private int orderId;
+	private Integer orderId;
 	
 	@Column(name="TOTAL_ORDER", columnDefinition="int")
-	private int totalOrder;
+	private Integer totalOrder;
 	
 	@Column(name="TAX", columnDefinition="float")
 	private float tax;
@@ -67,7 +67,7 @@ public class CustomerBill  implements Serializable{
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
@@ -75,7 +75,7 @@ public class CustomerBill  implements Serializable{
 		return customerId;
 	}
 
-	public void setCustomerId(int customerId) {
+	public void setCustomerId(Integer customerId) {
 		this.customerId = customerId;
 	}
 
@@ -83,7 +83,7 @@ public class CustomerBill  implements Serializable{
 		return orderId;
 	}
 
-	public void setOrderId(int orderId) {
+	public void setOrderId(Integer orderId) {
 		this.orderId = orderId;
 	}
 
@@ -91,7 +91,7 @@ public class CustomerBill  implements Serializable{
 		return totalOrder;
 	}
 
-	public void setTotalOrder(int totalOrder) {
+	public void setTotalOrder(Integer totalOrder) {
 		this.totalOrder = totalOrder;
 	}
 
@@ -99,7 +99,7 @@ public class CustomerBill  implements Serializable{
 		return tax;
 	}
 
-	public void setTax(float tax) {
+	public void setTax(Float tax) {
 		this.tax = tax;
 	}
 
@@ -107,7 +107,7 @@ public class CustomerBill  implements Serializable{
 		return discount;
 	}
 
-	public void setDiscount(float discount) {
+	public void setDiscount(Float discount) {
 		this.discount = discount;
 	}
 
@@ -115,7 +115,7 @@ public class CustomerBill  implements Serializable{
 		return totalAmount;
 	}
 
-	public void setTotalAmount(float totalAmount) {
+	public void setTotalAmount(Float totalAmount) {
 		this.totalAmount = totalAmount;
 	}
 
@@ -123,7 +123,7 @@ public class CustomerBill  implements Serializable{
 		return paidAmount;
 	}
 
-	public void setPaidAmount(float paidAmount) {
+	public void setPaidAmount(Float paidAmount) {
 		this.paidAmount = paidAmount;
 	}
 
@@ -131,7 +131,7 @@ public class CustomerBill  implements Serializable{
 		return balanceAmount;
 	}
 
-	public void setBalanceAmount(float balanceAmount) {
+	public void setBalanceAmount(Float balanceAmount) {
 		this.balanceAmount = balanceAmount;
 	}
 

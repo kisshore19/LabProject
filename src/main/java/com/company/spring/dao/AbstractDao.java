@@ -7,20 +7,20 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Transactional
 public class AbstractDao {
-	
-	@Autowired(required=true)
+
+	@Autowired(required = true)
 	public SessionFactory sessionFactory;
-	
-	protected Session getSession(){
+
+	protected Session getSession() {
 		return sessionFactory.getCurrentSession();
 	}
-	
-	public void persist(Object entity){
+
+	public void persist(Object entity) {
 		getSession().persist(entity);
 	}
-	
-	public void delete(Object entity){
+
+	public void delete(Object entity) {
 		getSession().delete(entity);
 	}
-	
+
 }

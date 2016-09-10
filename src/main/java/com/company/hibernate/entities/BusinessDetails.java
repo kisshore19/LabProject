@@ -28,7 +28,7 @@ public class BusinessDetails implements Serializable {
 	@Id
 	@GeneratedValue
 	@Column(name = "ID", columnDefinition = "int")
-	private int id;
+	private Integer id;
 
 	/*
 	 * For uni-direction one - to - many we need to use these steps
@@ -72,7 +72,7 @@ public class BusinessDetails implements Serializable {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 

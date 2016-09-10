@@ -26,8 +26,8 @@ public class SpringTest {
 		
 		ItemsService itemsService = (ItemsService) abstractApplicationContext.getBean("itemsService");
 		
-		
-		CustomerBill customerBill=new CustomerBill();
+		System.out.println(itemsService.getAllItems());
+		/*CustomerBill customerBill=new CustomerBill();
 		customerBill.setTotalAmount(2000.00f);
 		customerBill.setPaidAmount(2000.0f);
 		
@@ -77,9 +77,9 @@ public class SpringTest {
 		businessDetails.setCompanyName("JNATHRI");
 		businessDetails.setCompanyDomain("Lead success");
 		
-		/*businessDetails.getAccountDetails().add(accountDetails);
-		businessDetails.getAddresses().add(address);*/
-		businessDetailsService.saveBusinessDetails(businessDetails);
+		businessDetails.getAccountDetails().add(accountDetails);
+		businessDetails.getAddresses().add(address);
+		businessDetailsService.saveBusinessDetails(businessDetails);*/
 		
 		
 		//customerService.saveCustomer(customer);
