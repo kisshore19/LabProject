@@ -12,33 +12,29 @@ import com.company.spring.dao.BusinessDetailsDAO;
 public class BusinessDetailsServiceImpl implements BusinessDetailsService {
 
 	@Autowired
-	BusinessDetailsDAO businessDetailsDAO ;
+	BusinessDetailsDAO businessDetailsDAO;
 
 	public void saveBusinessDetails(BusinessDetails businessDetails) {
-		businessDetailsDAO.saveActor(businessDetails);
+		businessDetailsDAO.saveBusinessDetails(businessDetails);
 
 	}
-	
+
 	public BusinessDetails getBusinessDetails(BusinessDetails businessDetails) {
 		return businessDetailsDAO.getBusinessDetails(businessDetails);
 	}
 
-/*	public List<Actor> findAllActors() {
-		return actorDao.findAllActors();
-	}
-
-	public void deleteActorByFirstName(String firstName) {
-		actorDao.deleteActorByFirstName(firstName);
-
-	}
-
-	public Actor findActorByID(int id) {
-		return actorDao.findActorByID(id);
-	}
-
-	public void updateActor(Actor actor) {
-
-		actorDao.updateActor(actor);
-	}
-*/
+	/*
+	 * public List<Actor> findAllActors() { return actorDao.findAllActors(); }
+	 * 
+	 * public void deleteActorByFirstName(String firstName) {
+	 * actorDao.deleteActorByFirstName(firstName);
+	 * 
+	 * }
+	 * 
+	 * public Actor findActorByID(int id) { return actorDao.findActorByID(id); }
+	 * 
+	 * public void updateActor(Actor actor) {
+	 * 
+	 * actorDao.updateActor(actor); }
+	 */
 }

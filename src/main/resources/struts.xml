@@ -18,6 +18,17 @@
 			<result name="success">/WEB-INF/jsps/index.jsp</result>
 		</action>
 
+		<action name="saveNewBusiness" class="com.company.struts.actions.BusinessDetailsAction"
+			method="saveBusinessDetails">
+			<result name="success">/WEB-INF/jsps/index.jsp</result>
+		</action>
+
+
+		<!-- JSP's mapping -->
+		<action name="createNewBusiness">
+			<result>/WEB-INF/jsps/createBusiness.jsp</result>
+		</action>
+
 	</package>
 
 </struts>

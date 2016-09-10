@@ -30,18 +30,22 @@ public class BusinessDetails implements Serializable {
 	@Column(name = "ID", columnDefinition = "int")
 	private int id;
 
-	/*For uni-direction one - to - many 	we need to use these steps 
+	/*
+	 * For uni-direction one - to - many we need to use these steps
+	 * 
+	 * @OneToMany(cascade = CascadeType.ALL)
+	 * 
+	 * @JoinColumn(name="BUSINESS_DETAILS_ID") and this column should be null
+	 * acceptable
+	 */
+
 	@OneToMany(cascade = CascadeType.ALL)
-	@JoinColumn(name="BUSINESS_DETAILS_ID") and this column should be null acceptable */
-	
-	
-	@OneToMany(cascade = CascadeType.ALL)
-	@JoinColumn(name="BUSINESS_DETAILS_ID", nullable=false)
+	@JoinColumn(name = "BUSINESS_DETAILS_ID", nullable = false)
 	private List<AccountDetails> accountDetails;
-	
+
 	@OneToMany(cascade = CascadeType.ALL)
-	@JoinColumn(name="BUSINESS_DETAILS_ID", nullable=false)
-	private List<Address>  addresses;
+	@JoinColumn(name = "BUSINESS_DETAILS_ID", nullable = false)
+	private List<Address> addresses;
 
 	@Column(name = "COMPANY_NAME", columnDefinition = "varchar")
 	private String companyName;
@@ -123,7 +127,7 @@ public class BusinessDetails implements Serializable {
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
-	
+
 	public List<AccountDetails> getAccountDetails() {
 		if (accountDetails == null) {
 			accountDetails = new ArrayList<AccountDetails>();
@@ -132,11 +136,10 @@ public class BusinessDetails implements Serializable {
 	}
 
 	public List<Address> getAddresses() {
-		if(addresses == null){
+		if (addresses == null) {
 			addresses = new ArrayList<Address>();
 		}
 		return addresses;
 	}
-	
 
 }
