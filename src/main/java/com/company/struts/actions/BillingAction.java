@@ -9,8 +9,6 @@ import java.util.List;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.company.hibernate.entities.AccountDetails;
-import com.company.hibernate.entities.Address;
 import com.company.hibernate.entities.Items;
 import com.company.spring.services.BillService;
 
@@ -36,7 +34,19 @@ public class BillingAction {
 	private Date billDate;
 	
 	private List<Items> items;
-
+	
+	public void test(){
+		StringBuilder optionsHtml = new StringBuilder();
+		for (Items item : items) {
+			optionsHtml.append("<option value=\"");
+			optionsHtml.append(item.getId());
+			optionsHtml.append("\">");
+			optionsHtml.append(item.getItemName());
+			optionsHtml.append("</option>");
+			optionsHtml.append("\n");
+		}
+	}
+	
 	public String newBill() {
 		setItems(billService.createNewBill());
 		return SUCCESS;

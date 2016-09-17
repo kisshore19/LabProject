@@ -4,6 +4,7 @@ table {
 	font-family: arial, sans-serif;
 	border-collapse: collapse;
 	width: 100%;
+	counter-reset: rowNumber;
 }
 
 th {
@@ -18,6 +19,28 @@ td {
 	padding: 8px;
 }
 
-tr:nth-child(even) {
-	background-color: #dddddd;
+
+td#itemsAddButtonDataId{
+	text-align: center;
+}
+
+col:first-child {background: #FF0;}
+
+
+table tr:not(:first-child) {
+    counter-increment: rowNumber;
+}
+
+table tr td:first-child::before {
+  content: counter(rowNumber);
+  min-width: 1em;
+  margin-right: 0.5em;
+}
+
+#patientInfoHeader {
+	height: 50px;
+	text-align: left;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	margin-left: 20px;
 }

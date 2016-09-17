@@ -1,0 +1,26 @@
+Project Location : 
+/home/ogvkisshorre/javaworkspace/CompanyProject/
+
+Server Location :
+/home/ogvkisshorre/wildfly-10.1.0.Final/
+
+Deploy War :
+
+cp /home/ogvkisshorre/javaworkspace/CompanyProject/target/CompanyProject.war /home/ogvkisshorre/wildfly-10.1.0.Final/standalone/deployments/
+
+Run Server : 
+
+sudo nohup sh /home/ogvkisshorre/wildfly-10.1.0.Final/bin/standalone.sh > /dev/null 2>&1 &
+
+Server Log Location :
+
+tail -f /home/ogvkisshorre/wildfly-10.1.0.Final/standalone/log/server.log
+
+Check jboss processes : 
+
+ps -ax | grep jboss
+
+Reading table from html page to struts2 Action
+
+
++"<s:select list=\'items\' listValue=\'itemName\' listKey=\'id\' name=\'itemID\' theme=\'simple\'/>"

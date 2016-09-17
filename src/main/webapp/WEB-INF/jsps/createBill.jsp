@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@taglib prefix="s" uri="/struts-tags"%>
+<%@page import="java.util.List,com.company.hibernate.entities.Items" %>
+
 <!DOCTYPE html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -7,46 +9,28 @@
 
 <link href="resources/css/lab.css" rel="stylesheet">
 <script src="resources/js/jquery-3.1.0.js"></script>
-
-<script>
-
-$(document).ready(function(){
-	$('#addNewItemButtonId').click(function(e) {
-		e.preventDefault();
-		//alert("hi");
-		var additionalRow = "<tr>" +
-						"<td>" +
-							"<label id='itemNo'>1</label>" +
-						"</td>" +
-						"<td>dummy data</td>" +
-						"<td>" +
-							"<input type='number' name='itemQty'>" +
-						"</td>" +
-						"<td>" +
-							"<input type='number' name='itemPrice'>" +
-						"</td>" +
-						"<td>" +
-							"<input type='number' name='itemsTotalPrice'>" +
-						"</td>" +
-						"<td>" +
-							"<button onclick='addNewBillingItem(billingItemsTableId);'>+</button>" +
-						"</td>" +
-						"</tr>";
-		//console.log("Add button is called : " + tableId.id);
-		$("#billingItemsTableId").find('tr:last').after(additionalRow);
-
-		/* $("#billingItemsTableId").find('tr:last')
-			.append($('<tr>'))
-				.append($('<td>'))
-			; */
-	});
-
-});
+<script type="text/javascript" language="javascript" src="resources/js/datatables.min.js"></script>
+<script type="text/javascript" language="javascript" src="resources/js/common.js"></script>
 
 
+<%
 
+	List<Items> items = (List<Items>)request.getAttribute("items");
+	
+	StringBuilder itemsOptionsHtml = new StringBuilder();
+	for (Items item : items) {
+		itemsOptionsHtml.append("<option value=\"");
+		itemsOptionsHtml.append(item.getId());
+		itemsOptionsHtml.append("\">");
+		itemsOptionsHtml.append(item.getItemName());
+		itemsOptionsHtml.append("</option>");
+	}
+	
+	
+%>
+<script type="text/javascript">
+	var itemsOptionsHtml = '<%=itemsOptionsHtml%>';
 </script>
-
 </head>
 <body>
 	<form>
@@ -61,14 +45,13 @@ $(document).ready(function(){
 				<th>Total</th>
 				<th>Add/Remove</th>
 			</tr>
-			<tr>
-				<!-- <td><label  name="itemNo" value="1" ></label> </td> -->
-				<td ><label id="itemNo">1</label></td>
-				<td><s:select list="items" listValue="itemName" listKey="id" name="itemID" /></td>
-				<td><input type="number" name="itemQty"></td>
-				<td><input type="number" name="itemPrice"></td>
-				<td><input type="number" name="itemsTotalPrice"></td>
-				<td><button id ="addNewItemButtonId">+</button></td>
+			<tr id="itemsRow0">
+				<td id="itemNo"></td>
+				<td><s:select list="items" listValue="itemName" listKey="id" name="itemID0"/></td>
+				<td><input id='itemQtyID' type="number" name="itemQty"></td>
+				<td><input id='itemPriceID' type="number" name="itemPrice"></td>
+				<td><input id='itemsTotalPriceID' type="number" name="itemsTotalPrice"></td>
+				<td id='itemsAddButtonDataId'><button id ="addNewItemButtonId0" type="button">+</button></td>
 
 			</tr>
 
