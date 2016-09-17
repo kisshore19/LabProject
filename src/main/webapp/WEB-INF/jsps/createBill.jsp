@@ -34,22 +34,23 @@
 </head>
 <body>
 	<form>
+		<div id="patientInfoHeader">
 		Patient Name : <input type="text" name="companyName"></input> Patient Age : <input type="number" name="companyName"></input> Date : <input type="date" name="companyName"></input>
-
+		</div>
 		<table id="billingItemsTableId">
 			<tr>
 				<th>S.No.</th>
 				<th>Test Name</th>
-				<th>Qty</th>
 				<th>Price</th>
+				<th>Qty</th>
 				<th>Total</th>
 				<th>Add/Remove</th>
 			</tr>
 			<tr id="itemsRow0">
 				<td id="itemNo"></td>
 				<td><s:select list="items" listValue="itemName" listKey="id" name="itemID0"/></td>
-				<td><input id='itemQtyID' type="number" name="itemQty"></td>
 				<td><input id='itemPriceID' type="number" name="itemPrice"></td>
+				<td><input id='itemQtyID' type="number" name="itemQty"></td>
 				<td><input id='itemsTotalPriceID' type="number" name="itemsTotalPrice"></td>
 				<td id='itemsAddButtonDataId'><button id ="addNewItemButtonId0" type="button">+</button></td>
 
