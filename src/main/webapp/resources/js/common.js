@@ -17,14 +17,14 @@ $(document).on(
 					console.log("Clicked on row number : " + tableRowNumber);
 					var currentaddNewItemButtonValue = $(clickedEventId).html();
 					if (currentaddNewItemButtonValue == '+') {
-						var addNewItemButtonId = "addNewItemButtonId" + (tableRowNumber);
+						var addNewItemButtonId = "addNewItemButtonId" + (tableRowNumber+1);
 
-						var additionalRow = "<tr id=itemsRow" + (tableRowNumber) + ">" + "<td></td>" 
+						var additionalRow = "<tr id=itemsRow" + (tableRowNumber+1) + ">" + "<td></td>" 
 								+ "<td><select name=itemID" + (tableRowNumber) + " id=itemID" + (tableRowNumber) +">"
 								+ itemsOptionsHtml + "</td>" 
-								+ "<td><input id=itemPriceID" + (tableRowNumber) + " type='number' name=itemPrice" + (tableRowNumber) +"></td>"
 								+ "<td><input id=itemQtyID" + (tableRowNumber) + " type='number' name='itemQty'" + (tableRowNumber) +"></td>"
-								+ "<td><input id=itemsTotalPriceID" + (tableRowNumber) + " type='number' name=itemsTotalPrice" + (tableRowNumber) +"></td>"
+								+ "<td><input id=itemPriceID" + (tableRowNumber) + " type='number' name=itemPrice" + (tableRowNumber) +"></td>"
+								+ "<td><input id=itemsTotalPriceID" + (tableRowNumber) + " type='number' name=itemsTotalPrice + (tableRowNumber) +>" + "</td>"
 								+ "<td id='itemsAddButtonDataId'><button id =" + addNewItemButtonId + " type='button'>+</button></td>" + "</tr>";
 						// console.log("Additional row : " + additionalRow );
 						$(clickedEventId).text('-');
@@ -45,6 +45,7 @@ $(document).on(
 
 function sortTableIds(tableId, itemsRowId, itemButtonId) {
 	$(tableId + ' tr').each(function(index) {
+		console.log("Index is : "+ index);
 		var trID = $(this).attr('id');
 		if (trID !== "undefined" && trID != null) {
 			var itemsTmp = itemsRowId + index;
@@ -53,6 +54,7 @@ function sortTableIds(tableId, itemsRowId, itemButtonId) {
 			var buttonID = $(this).find(":button");
 			$(buttonID).attr("id", buttonTmp);
 		}
+		console.log("Refreshed buttons id : " + $(buttonID).attr("id") );
 	})
 }
 

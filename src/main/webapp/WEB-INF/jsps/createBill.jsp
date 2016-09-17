@@ -49,9 +49,9 @@
 			<tr id="itemsRow0">
 				<td id="itemNo"></td>
 				<td><s:select list="items" listValue="itemName" listKey="id" name="itemID0"/></td>
-				<td><input id='itemPriceID' type="number" name="itemPrice"></td>
-				<td><input id='itemQtyID' type="number" name="itemQty"></td>
-				<td><input id='itemsTotalPriceID' type="number" name="itemsTotalPrice"></td>
+				<td><input id='itemPriceID0' type="number" name="itemPrice"></td>
+				<td><input id='itemQtyID0' type="number" name="itemQty"></td>
+				<td><input id='itemsTotalPriceID0' type="number" name="itemsTotalPrice"></td>
 				<td id='itemsAddButtonDataId'><button id ="addNewItemButtonId0" type="button">+</button></td>
 
 			</tr>
