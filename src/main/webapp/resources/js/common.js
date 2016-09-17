@@ -9,19 +9,22 @@ $(document).on(
 
 				if (e.target.id.includes("addNewItemButtonId")) {
 					var clickedEventId = "#" + e.target.id;// $([
-					// 'id^=addNewItemButtonId'
-					// ]);
+															// 'id^=addNewItemButtonId'
+															// ]);
 					//console.log("clickedEventId : " + clickedEventId);
 					var tableRowNumber = $(clickedEventId).closest("tr").index();
 					//console.log("Finding row number : " + tableRowNumber);
+					console.log("Clicked on row number : " + tableRowNumber);
 					var currentaddNewItemButtonValue = $(clickedEventId).html();
 					if (currentaddNewItemButtonValue == '+') {
-						var addNewItemButtonId = "addNewItemButtonId" + (tableRowNumber + 1);
+						var addNewItemButtonId = "addNewItemButtonId" + (tableRowNumber);
 
-						var additionalRow = "<tr id=itemsRow" + (tableRowNumber) + ">" + "<td></td>" + "<td><select name=\"itemID1\" id=\"itemID1\">"
-								+ itemsOptionsHtml + "</td>" + "<td><input id='itemQtyID' type='number' name='itemQty'>" + "</td>"
-								+ "<td><input id='itemPriceID' type='number' name='itemPrice'>" + "</td>"
-								+ "<td><input id='itemsTotalPriceID' type='number' name='itemsTotalPrice'>" + "</td>"
+						var additionalRow = "<tr id=itemsRow" + (tableRowNumber) + ">" + "<td></td>" 
+								+ "<td><select name=itemID" + (tableRowNumber) + " id=itemID" + (tableRowNumber) +">"
+								+ itemsOptionsHtml + "</td>" 
+								+ "<td><input id=itemPriceID" + (tableRowNumber) + " type='number' name=itemPrice" + (tableRowNumber) +"></td>"
+								+ "<td><input id=itemQtyID" + (tableRowNumber) + " type='number' name='itemQty'" + (tableRowNumber) +"></td>"
+								+ "<td><input id=itemsTotalPriceID" + (tableRowNumber) + " type='number' name=itemsTotalPrice" + (tableRowNumber) +"></td>"
 								+ "<td id='itemsAddButtonDataId'><button id =" + addNewItemButtonId + " type='button'>+</button></td>" + "</tr>";
 						// console.log("Additional row : " + additionalRow );
 						$(clickedEventId).text('-');
@@ -52,3 +55,6 @@ function sortTableIds(tableId, itemsRowId, itemButtonId) {
 		}
 	})
 }
+
+
+
